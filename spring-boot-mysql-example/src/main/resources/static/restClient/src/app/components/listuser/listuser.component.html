@@ -1,0 +1,23 @@
+<div class="container">
+  <table class="table table-stiped">
+    <thead>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Salary</th>
+            <th>Team</th>
+            <th></th>
+          
+    </thead>
+    <tbody>
+      <tr *ngFor="let users of users">
+         <td>{{ users.id }}</td>
+         <td>{{ users.name }}</td>
+         <td>{{ users.salary }}</td>
+         <td>{{ users.teamName }}</td>
+         <td><button class="btn btn-danger" (click)="deleteUser(users)">Delete</button></td>
+         <td><button class="btn btn-primary" (click)="updateUser(users)">Edit</button></td>
+        </tr>
+    </tbody>
+  </table>
+  <td><button class="btn btn-primary" (click)="newUser()">Add new user</button></td>
+</div>
