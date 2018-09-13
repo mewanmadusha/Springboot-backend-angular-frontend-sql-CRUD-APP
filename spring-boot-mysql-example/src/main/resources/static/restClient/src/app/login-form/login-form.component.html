@@ -1,0 +1,23 @@
+<!-- <form class="login" (submit)="loginUser($event)">
+  <h1 class="login-title" for="">Login</h1>
+    <input class="login-input" type="text" placeholder="User name" autofocus>
+    <input class="login-input" type="password" placeholder="Password">
+    <input type="submit" value="Login" class="login-button">
+
+    <button routerLink="/login-email"  class="login-button" id="email">Email</button>
+
+    <button (click)="loginGoogle()"  class="login-button" id="google">Login Google</button>
+
+    <a routerLink="/signup" routerLinkActive="active" class="alc" id="email">No account?<strong>Create one here</strong></a>
+</form> -->
+<div class="form-container">
+  <img src="assets/images/lock.svg" id="lock">
+
+    <span class="error" *ngIf="error">{{ error }}</span>
+
+  <button (click)="loginFb()" id="fb">Login With Facebook</button><br>
+  <button (click)="loginGoogle()" id="google">Login With Google</button>
+  <button routerLink="/login-email" id="email">Email</button>
+
+  <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+</div>

@@ -3,6 +3,7 @@ import { Users } from '../../users';
 import {Router} from '@angular/router';
 import { UsersService } from './../../shared_service/users.service';
 import {Location} from '@angular/common';
+import { UserloginService } from '../../userlogin.service';
 
 @Component({
   selector: 'app-user-form',
@@ -13,7 +14,7 @@ export class UserFormComponent implements OnInit {
  
   private user:Users;
 
-  constructor(private _userService:UsersService,private _router:Router,private _location:Location) { }
+  constructor(private _userService:UsersService,private _router:Router,private _location:Location,private userlogin:UserloginService) { }
 
   ngOnInit() {
     this.user=this._userService.getter();
